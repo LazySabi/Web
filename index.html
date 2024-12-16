@@ -80,37 +80,34 @@
           </ul>
         </div>
         <!-- Зв'язок зі мною -->
-        <div>
-          <div>
-            <label for="user-name"> Name </label>
-            <div>
-              <input id="user-name" type="text" name="user-name" />
+        <form id="contactForm" novalidate>
+            <div class="form-group">
+                <label for="name">Ім’я:</label><br>
+                <input type="text" id="name" name="name" required>
+                <div id="nameError" class="error"></div>
             </div>
-          </div>
-          <div>
-            <label class="form-label" for="user-phone"> Phone </label>
-            <div>
-              <input type="tel" name="user-phone" id="user-phone" />
+    
+            <div class="form-group">
+                <label for="email">Електронна пошта:</label><br>
+                <input type="email" id="email" name="email" required>
+                <div id="emailError" class="error"></div>
             </div>
-          </div>
-          <div>
-            <label for="user-email"> Email </label>
-            <div>
-              <input type="email" name="user-email" id="user-email" />
+    
+            <div class="form-group">
+                <label for="phone">Телефон:</label><br>
+                <input type="text" id="phone" name="phone" required>
+                <div id="phoneError" class="error"></div>
             </div>
-          </div>
-          <div>
-            <label for="user-comment"> Comment </label>
-            <div>
-              <textarea
-                name="user-comment"
-                placeholder="Text input"
-                rows="5"
-                id="user-comment"
-              ></textarea>
+    
+            <div class="form-group">
+                <label for="message">Текст повідомлення:</label><br>
+                <textarea id="message" name="message" rows="5" required></textarea>
+                <div id="messageLength">Довжина повідомлення: 0 символів</div>
             </div>
-          </div>
-        </div>
+    
+            <button type="submit">Відправити</button>
+        </form>
+
         <!-- Мої знання -->
         <div>
           <h3>Tech Skills</h3>
@@ -140,7 +137,7 @@
       --------------------------------------------------------------------------
     </p>
     <a href="./pages/technowiki.html">Я вмію створювати Вікіпедію</a>
-    
+
     <script src="./js/script.js"></script>
   </body>
 </html>
